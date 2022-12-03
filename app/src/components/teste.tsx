@@ -18,16 +18,14 @@ export default function ({setRoute}: {setRoute: Dispatch<SetStateAction<string>>
     alert("Você não está logado!")
   }
 
-  const alteraDados: MouseEventHandler<HTMLButtonElement> = async ev => {
+  const meusCookies: MouseEventHandler<HTMLButtonElement> = async ev => {
     ev.preventDefault()
     const request = await fetch(`/api/logged/${localStorage.getItem('token')}`)
 
     if (request.status >= 200 && request.status <= 299) {
       ev.preventDefault()
       const user = await request.json()
-      setName(user.name)
-      setEmail(user.email)
-      setRoute("update")
+      setRoute("cookie")
       console.log("okay")
       return
     }
@@ -60,7 +58,7 @@ export default function ({setRoute}: {setRoute: Dispatch<SetStateAction<string>>
     </div>
     <div className = "btn-teste">
       <button onClick={buscarDados}>buscar</button>
-      <button onClick={alteraDados}>alterar</button>
+      <button onClick={meusCookies}>meus cookies</button>
       <button onClick={logOff}>sair</button>
     </div>
   </>

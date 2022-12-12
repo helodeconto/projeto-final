@@ -39,3 +39,72 @@
 .read-the-docs {
   color: #888;
 }
+
+/*barra rolagem*/
+::-webkit-scrollbar {
+  width: 0.7vw;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #342D29;
+}
+
+
+body {
+  height: 80%;
+  background-color: #D4C0AB;
+  color: #342D29;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#root {
+  width: 40vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+input, select {
+  background-color: #D4C0AB;
+  border: 2px solid #342D29;
+  border-radius: 5px;
+  height: 24px;
+  width: 100%;
+  font-size: 14px;
+  color: #342D29;
+  text-align: center;
+  margin: 2px;
+}
+
+.btn-teste {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+button {
+  width: 48%;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #D4C0AB;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
